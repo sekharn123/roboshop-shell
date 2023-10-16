@@ -1,17 +1,15 @@
-echo -e "\e[34m downloading nodejs server]"
+echo -e "\e[34m downloading nodejs repo/e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[34m installing nodejs server]"
 yum install nodejs -y
-echo -e "\e[34m adding user\e[0m"
+echo -e "\e[34m adding user and location\e[0m"
 useradd roboshop
-echo -e "\e[34m creating a directory\e[0m"
 mkdir /app
 cd /app
 echo -e "\e[34m Downloading the catalogue\e[0m"
 curl -O https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 unzip catalogue.zip
 rm -rf catalogue.zip
-echo -e "\e[34m downloading the dependencies\e[0m"
 npm install
 echo -e "\e[34m creating the catalogue service\e[0m"
 cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
