@@ -11,5 +11,4 @@ echo -e "\e[33m Configuring reverse proxy server\e[0m"
 cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 echo -e "\e[33m Enabling and starting the nginx server\e[0m"
 systemctl enable nginx &>>/tmp/roboshop.log
-
 systemctl restart nginx
