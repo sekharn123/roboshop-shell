@@ -16,6 +16,7 @@ npm install
 echo -e "\e[34m creating the catalogue service\e[0m"
 cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[34m downloading and installing mongodb schema\e[0m"
+cp /root/roboshop-shell/mongodb.repo  /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb-dev.sekhar.cloud</app/schema/catalogue.js
 echo -e "\e[34m Enabling and starting the catalogue service\e[0m"
