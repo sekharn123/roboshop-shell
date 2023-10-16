@@ -1,4 +1,4 @@
-echo -e "\e[33m Installing nginx Server \e[0m"
+echo -e "\e[33m Installing Nginx Server \e[0m"
 yum install nginx -y &>>/tmp/roboshop.log
 echo -e "\e[33m Removing default nginx content\e[0m"
 cd /usr/share/nginx/html
