@@ -6,7 +6,7 @@ echo -e "\e[34m adding user and location\e[0m"
 useradd roboshop
 mkdir /app
 cd /app
-echo -e "\e[34m Downloading the catalogue\e[0m"
+echo -e "\e[34m Downloading the app content\e[0m"
 curl -O https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 unzip catalogue.zip
 rm -rf catalogue.zip
