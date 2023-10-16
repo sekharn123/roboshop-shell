@@ -3,9 +3,6 @@ yum install nginx -y &>>/tmp/roboshop.log
 echo -e "\e[33m Removing default nginx content\e[0m"
 cd /usr/share/nginx/html
 rm -rf * &>>/tmp/roboshop.log
-useradd roboshop
-mkdir /app
-cd /app
 echo -e "\e[33m Download New Content to nginx \e[0m"
 curl -O https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>/tmp/roboshop.log
 unzip frontend.zip &>>/tmp/roboshop.log
