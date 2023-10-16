@@ -20,4 +20,4 @@ mongo --host mongodb-dev.sekhar.cloud</app/schema/catalogue.js
 echo -e "\e[34m Enabling and starting the catalogue service\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
-systemctl restart catalouge
+systemctl restart catalogue
